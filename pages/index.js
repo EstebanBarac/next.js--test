@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react';
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +21,7 @@ export default function Home() {
         <a href='#cursos' className={styles.links}>Nuestros viajes</a>
       </nav>
      <div className={styles.divVideo}>
-        <video className={styles.video} src="https://pro-cms.padi.com/sites/default/files/documents/marketing-hub/Lead%20Adventure%20Video_ENGLISH.mp4?_ga=2.210710038.248074504.1667315833-516230998.1662745008" autoplay="true" muted="true" loop="true"></video>
+        <video className={styles.video} src="https://pro-cms.padi.com/sites/default/files/documents/marketing-hub/Lead%20Adventure%20Video_ENGLISH.mp4?_ga=2.210710038.248074504.1667315833-516230998.1662745008" autoPlay={true} muted={true} loop={true} ></video>
       </div>
       <main className={styles.main} id='cursos'>
         <h1 className={styles.title}>
@@ -41,7 +45,7 @@ export default function Home() {
         </div>
         
         <div className={styles.banner}>
-          <img className={styles.bannerImg} src='https://cdn.discordapp.com/attachments/841443299839574017/1038257680344694885/Rectangle_1_1.png'></img>
+          <img className={styles.bannerImg} src='https://cdn.discordapp.com/attachments/841443299839574017/1038255449688002660/Rectangle_1.png'></img>
         </div>
 
 
@@ -53,33 +57,65 @@ export default function Home() {
           
           <div className={styles.cardCursos}>
               
-              <img className={styles.CardImg} src="https://cdn.discordapp.com/attachments/841443299839574017/1038261724953972746/Rectangle_1_2.png" alt="Avatar" />
+              <img className={styles.CardImg} src="https://cdn.discordapp.com/attachments/841443299839574017/1038264440279269436/Rectangle_2_1.png" alt="Avatar" />
               
               <div className={styles.CardContainer}>
                 <h4><b>PADI Open Water</b></h4>
                 <p>El PADI Open Water Diver es el primer nivel de certificación de buceo. Un PADI Instructor altamente entrenado te enseñará a bucear en un entorno de aprendizaje relajado y seguro.</p>
+                <button className={styles.btnCard} onClick={() => setShowModal(true)} >Ver mas</button>
               </div>
             </div>
             
             <div className={styles.cardCursos}>
               <img className={styles.CardImg} src="https://cdn.discordapp.com/attachments/841443299839574017/1038264126243340328/Rectangle_2.png" alt="Avatar" />
               <div className={styles.CardContainer}>
-                <h4><b>PADI Open Water</b></h4>
+                <h4><b>PADI Advanced Open Water Diver</b></h4>
                 <p>El PADI Open Water Diver es el primer nivel de certificación de buceo. Un PADI Instructor altamente entrenado te enseñará a bucear en un entorno de aprendizaje relajado y seguro.</p>
               </div>
             </div>
             
             <div className={styles.cardCursos}>
-              <img className={styles.CardImg} src="https://cdn.discordapp.com/attachments/841443299839574017/1038264440279269436/Rectangle_2_1.png" alt="Avatar" />
+              <img className={styles.CardImg} src="https://cdn.discordapp.com/attachments/841443299839574017/1038261724953972746/Rectangle_1_2.png" alt="Avatar" />
               <div className={styles.CardContainer}>
-                <h4><b>PADI Open Water</b></h4>
+                <h4><b>PADI Specialities</b></h4>
                 <p>El PADI Open Water Diver es el primer nivel de certificación de buceo. Un PADI Instructor altamente entrenado te enseñará a bucear en un entorno de aprendizaje relajado y seguro.</p>
               </div>
             </div>
           </div>
         </div>
+        
+      {showModal ? ( 
+      <div className={styles.modal}>
+        <div className={styles.modalContent}>
+          <h3>Información Curso de Buceo PADI- Open Water Diver</h3>
+          <p>El curso Open Water, es el primer nivel de las certificaciones de Buceo PADI, finalizado el curso te permite realizar inmersiones en cualquier parte del mundo hasta una profundidad máxima de 18 metros, habilitando también a la renta de equipamiento en caso de ser necesario.</p>
+          <h4>El curso consta de tres áreas:</h4>
+          <p>- Parte Teórica, modalidad online o presencial</p> 
+             <p>- Parte Práctica Aguas Confinadas ( 5-inmersiones en piscina climatizada)</p>
+             <p>- Parte Práctica Aguas Abiertas      ( 4- inmersiones en Lago Marimenuco)</p>
+             <h4>Incluye:</h4>
+             <p>- Clases Personalizadas con Instructor PADI</p>
+             <p>- Manuales y Material PADI</p>
+             <p>- Equipamiento de buceo completo durante el curso (traje neoprene, BCD, tanque, aletas, etc.)</p>
+             <p>- Inmersiones Parte práctica ( No incluye traslados)</p>
+             <p>- Certificación Internacional</p>   
+          <h4>Tiempo: 10hs teoría, 5 a 7 días práctica</h4>
+          <h4>Requisitos: Saber nadar y ser mayor de 15 años</h4>   
+          <p>(de 10 a 14 años reciben certificación Junior)</p>
+             
+             
+             
+          <button className={styles.modalBtnInteresa}>Me interesa !!</button>
+          <button className={styles.modalCerrar} onClick={() => setShowModal(false)}>Cerrar</button>
+        </div>
+        
+      </div>
       
+      )
+
+       :
       
+      null}
       
       </main>
 
