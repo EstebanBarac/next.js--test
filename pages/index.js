@@ -5,7 +5,9 @@ import styles from '../styles/Home.module.css'
 
 export default function Home() {
 
-  const [showModal, setShowModal] = useState(false);
+  const [showModal1, setShowModal1] = useState(false);
+  const [showModal2, setShowModal2] = useState(false);
+  const [showModal3, setShowModal3] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -62,7 +64,7 @@ export default function Home() {
               <div className={styles.CardContainer}>
                 <h4><b>PADI Open Water</b></h4>
                 <p>El PADI Open Water Diver es el primer nivel de certificación de buceo. Un PADI Instructor altamente entrenado te enseñará a bucear en un entorno de aprendizaje relajado y seguro.</p>
-                <button className={styles.btnCard} onClick={() => setShowModal(true)} >Ver mas</button>
+                <button className={styles.btnCard} onClick={() => setShowModal1(true)} >Ver mas</button>
               </div>
             </div>
             
@@ -71,6 +73,7 @@ export default function Home() {
               <div className={styles.CardContainer}>
                 <h4><b>PADI Advanced Open Water Diver</b></h4>
                 <p>El PADI Open Water Diver es el primer nivel de certificación de buceo. Un PADI Instructor altamente entrenado te enseñará a bucear en un entorno de aprendizaje relajado y seguro.</p>
+                <button className={styles.btnCard} onClick={() => setShowModal2(true)} >Ver mas</button>
               </div>
             </div>
             
@@ -79,12 +82,13 @@ export default function Home() {
               <div className={styles.CardContainer}>
                 <h4><b>PADI Specialities</b></h4>
                 <p>El PADI Open Water Diver es el primer nivel de certificación de buceo. Un PADI Instructor altamente entrenado te enseñará a bucear en un entorno de aprendizaje relajado y seguro.</p>
+                <button className={styles.btnCard} onClick={() => setShowModal3(true)} >Ver mas</button>
               </div>
             </div>
           </div>
         </div>
         
-      {showModal ? ( 
+      {showModal1 ? ( 
       <div className={styles.modal}>
         <div className={styles.modalContent}>
           <h3>Información Curso de Buceo PADI- Open Water Diver</h3>
@@ -106,7 +110,7 @@ export default function Home() {
              
              
           <button className={styles.modalBtnInteresa}>Me interesa !!</button>
-          <button className={styles.modalCerrar} onClick={() => setShowModal(false)}>Cerrar</button>
+          <button className={styles.modalCerrar} onClick={() => setShowModal1(false)}>Cerrar</button>
         </div>
         
       </div>
@@ -116,7 +120,78 @@ export default function Home() {
        :
       
       null}
+
+
+      {showModal2 ? ( 
+      <div className={styles.modal}>
+        <div className={styles.modalContent}>
+          <h3>Información Curso de Buceo PADI- Open Advanced Diver</h3>
+          <p>El curso Open Water, es el primer nivel de las certificaciones de Buceo PADI, finalizado el curso te permite realizar inmersiones en cualquier parte del mundo hasta una profundidad máxima de 18 metros, habilitando también a la renta de equipamiento en caso de ser necesario.</p>
+          <h4>El curso consta de tres áreas:</h4>
+          <p>- Parte Teórica, modalidad online o presencial</p> 
+             <p>- Parte Práctica Aguas Confinadas ( 5-inmersiones en piscina climatizada)</p>
+             <p>- Parte Práctica Aguas Abiertas      ( 4- inmersiones en Lago Marimenuco)</p>
+             <h4>Incluye:</h4>
+             <p>- Clases Personalizadas con Instructor PADI</p>
+             <p>- Manuales y Material PADI</p>
+             <p>- Equipamiento de buceo completo durante el curso (traje neoprene, BCD, tanque, aletas, etc.)</p>
+             <p>- Inmersiones Parte práctica ( No incluye traslados)</p>
+             <p>- Certificación Internacional</p>   
+          <h4>Tiempo: 10hs teoría, 5 a 7 días práctica</h4>
+          <h4>Requisitos: Saber nadar y ser mayor de 15 años</h4>   
+          <p>(de 10 a 14 años reciben certificación Junior)</p>
+             
+             
+             
+          <button className={styles.modalBtnInteresa}>Me interesa !!</button>
+          <button className={styles.modalCerrar} onClick={() => setShowModal2(false)}>Cerrar</button>
+        </div>
+        
+      </div>
       
+      )
+
+       :
+      
+      null}
+
+     {showModal3 ? ( 
+      <div className={styles.modal}>
+        <div className={styles.modalContent}>
+          <h3>Información Curso de Buceo PADI- Specialities Diver</h3>
+          <p>El curso Open Water, es el primer nivel de las certificaciones de Buceo PADI, finalizado el curso te permite realizar inmersiones en cualquier parte del mundo hasta una profundidad máxima de 18 metros, habilitando también a la renta de equipamiento en caso de ser necesario.</p>
+          <h4>El curso consta de tres áreas:</h4>
+          <p>- Parte Teórica, modalidad online o presencial</p> 
+             <p>- Parte Práctica Aguas Confinadas ( 5-inmersiones en piscina climatizada)</p>
+             <p>- Parte Práctica Aguas Abiertas      ( 4- inmersiones en Lago Marimenuco)</p>
+             <h4>Incluye:</h4>
+             <p>- Clases Personalizadas con Instructor PADI</p>
+             <p>- Manuales y Material PADI</p>
+             <p>- Equipamiento de buceo completo durante el curso (traje neoprene, BCD, tanque, aletas, etc.)</p>
+             <p>- Inmersiones Parte práctica ( No incluye traslados)</p>
+             <p>- Certificación Internacional</p>   
+          <h4>Tiempo: 10hs teoría, 5 a 7 días práctica</h4>
+          <h4>Requisitos: Saber nadar y ser mayor de 15 años</h4>   
+          <p>(de 10 a 14 años reciben certificación Junior)</p>
+             
+             
+             
+          <button className={styles.modalBtnInteresa}>Me interesa !!</button>
+          <button className={styles.modalCerrar} onClick={() => setShowModal3(false)}>Cerrar</button>
+        </div>
+        
+      </div>
+      
+      )
+
+       :
+      
+      null}
+
+
+
+
+
       </main>
 
 
