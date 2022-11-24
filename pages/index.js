@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from '../styles/Home.module.css'
 
@@ -72,7 +73,7 @@ export default function Home() {
               
               <div className={styles.CardContainer}>
                 <h4><b>PADI Open Water</b></h4>
-                <p>El PADI Open Water Diver es el primer nivel de certificación de buceo. Un PADI Instructor altamente entrenado te enseñará a bucear en un entorno de aprendizaje relajado y seguro.</p>
+                <p>El PADI Open Water Diver es el primer nivel de certificación de buceo. Un PADI Instructor altamente entrenado te enseñará a bucear en un entorno de aprendizaje relajado y seguro. Aprende los principios y la terminología del buceo, adquiere las destrezas básicas de buceo y conocimientos para bucear en tu entorno local o en el extranjero y ser un embajador del mundo subacuático.</p>
                 <button className={styles.btnCard} onClick={() => setShowModal1(true)} >Ver mas</button>
               </div>
             </div>
@@ -126,7 +127,8 @@ export default function Home() {
              
              
              
-          <button className={styles.modalBtnInteresa}>Me interesa !!</button>
+          <button className={styles.modalBtnInteresa}><Link href='https://api.whatsapp.com/send?phone=5492995125034&text=Buenas!%20Quiero%20mas%20informacion%20sobre%20el%20curso%20PADI%20Open%20Water'>Me interesa !!</Link></button>
+
           <button className={styles.modalCerrar} onClick={() => setShowModal1(false)}>Cerrar</button>
         </div>
         
@@ -182,7 +184,8 @@ export default function Home() {
              
              
              
-          <button className={styles.modalBtnInteresa}>Me interesa !!</button>
+          <button className={styles.modalBtnInteresa}><Link href='https://api.whatsapp.com/send?phone=5492995125034&text=Buenas!%20Quiero%20mas%20informacion%20sobre%20el%20curso%20ADVANCED%20Open%20Water%20Diver'>Me interesa !!</Link></button>
+
           <button className={styles.modalCerrar} onClick={() => setShowModal2(false)}>Cerrar</button>
         </div>
         
@@ -223,7 +226,8 @@ export default function Home() {
               cómo usar un globo elevador.</p> 
              
              
-          <button className={styles.modalBtnInteresa}>Me interesa !!</button>
+          <button className={styles.modalBtnInteresa}><Link href='https://api.whatsapp.com/send?phone=5492995125034&text=Buenas!%20Quiero%20mas%20informacion%20sobre%20el%20curso%20PADI%20Specialities'>Me interesa !!</Link></button>
+
           <button className={styles.modalCerrar} onClick={() => setShowModal3(false)}>Cerrar</button>
         </div>
         
